@@ -9,5 +9,4 @@ A dns server application that uses a hash table as a data structure
 
 ![tab info](https://user-images.githubusercontent.com/36822517/42100359-47714aa4-7bc0-11e8-8da0-f8ae6e0bddbf.png)
 ![app info](https://user-images.githubusercontent.com/36822517/42100379-4eba747a-7bc0-11e8-94c5-f09d48da4fc9.png)
-![tab info](https://user-images.githubusercontent.com/36822517/42100387-5457fcf4-7bc0-11e8-91a3-786f7b4f35c9.png)
 
