@@ -5,6 +5,8 @@ A dns server application that uses a hash table as a data structure
 
 ## File Management
 ![screenshot 114](https://user-images.githubusercontent.com/36822517/42100229-eea438c8-7bbf-11e8-821a-ee17d162f243.png)
+
+## Rashing
 ![rehashing](https://user-images.githubusercontent.com/36822517/42100366-4b099aae-7bc0-11e8-8188-c1f7cd4795c3.png)
 
 ![app info](https://user-images.githubusercontent.com/36822517/42100379-4eba747a-7bc0-11e8-94c5-f09d48da4fc9.png)
