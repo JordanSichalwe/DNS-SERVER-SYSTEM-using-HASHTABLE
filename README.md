@@ -1,5 +1,12 @@
 # DNS-SERVER-SYSTEM-using-HASHTABLE
 A dns server application that uses a hash table as a data structure
+### REQUIREMENTS
+DNS App requires the following:
+ Windows 64-bit for this build (Can be modified to work on MAC and 32-bit Windows)
+ Python 3.6
+- Python Interpreter
+- Numpy module
+- Kivy modules(kivy, kivy.deps.glew, kivy.deps.sdl2)
 
 ## Insertion Diagram
 ![untitled](https://user-images.githubusercontent.com/36822517/42100389-573aaebc-7bc0-11e8-85fb-4d8346a5e5b5.png)
