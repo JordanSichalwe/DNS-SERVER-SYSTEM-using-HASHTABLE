@@ -1,0 +1,280 @@
+
+#: import ListAdatpter kivy.adapters.listadapter.ListAdapter
+#: import ListItemButton kivy.uix.listview.ListItemButton
+
+AppGridLayout:
+
+<CustButton@Button>:
+    font_size: 16
+    bold:True
+    size: 100, 30
+    background_normal: 'UI_files/button_norm.png'
+    background_down: 'UI_files/button_down.png'
+    background_color: .88, .88, .88, 1
+    size_hint: .2, .2
+
+<AppGridLayout>:
+
+    id:app_grid
+    rows: 5
+    padding:10
+    spacing:10
+    canvas:
+        Rectangle:
+            source: 'UI_files/famous.gif'
+            size: self.size
+            pos: self.pos
+    BoxLayout:
+        padding: 0
+        size_hint_y: None
+        height: 40
+        spacing: 20
+        # Make the background for the toolbar white
+        canvas:
+            Rectangle:
+                source: 'UI_files/famous.gif'
+
+        Button:
+            background_normal: 'UI_files/about.png'
+            background_down: 'disk_dn.png'
+            size_hint_x: None
+            on_press:app_grid.about_popup()
+            width: 40
+        Button:
+            background_normal: 'UI_files/help_icon.png'
+            background_down: 'exit_dn.png'
+            size_hint_x: None
+            on_press:app_grid.help_popup()
+            width: 40
+        FloatLayout:
+            padding:10
+            Button:
+                background_normal: 'UI_files/close.png'
+                background_down: 'exit_dn.png'
+                pos_hint: {"right":1, "y": -.1}
+                size_hint_x:None
+                size_hint_y:None
+                height:40
+                width:40
+                on_press: app_grid.close_window()
+
+
+    TabbedMenu:
+        do_default_tab:False
+        size_hint: 20, 10
+        padding:10
+        background_color: 1, 0, 0, .5
+        tab_width:206
+
+
+        TabbedPanelItem:
+            font_size:14
+            bold:True
+            text: "Search by Domain Name"
+            BoxLayout:
+                size_hint_y: None
+                height: "400dp"
+                spacing:20
+                padding:20
+                Label:
+                    pos_hint:{"top":.1,"y":1}
+                    text: "Domain Name:"
+                    bold: True
+                TextInput:
+                    pos_hint:{"centre_x":.5,"y":.3}
+                    size_hint_y: None
+                    height: "100dp"
+                    hint_text:"eg: <name>.<sub_domain>.<upper_domain>"
+                    id:search_domain_name
+                    font_size:16
+                    italic: True
+                    multiline: False
+
+                FloatLayout:
+                    CustButton:
+                        text: "Search"
+                        pos_hint: {"right":.5, "y": 0}
+                        size_hint: .4, .2
+                        italic: True
+                        on_press: app_grid.search_by_name(search_domain_name.text)
+
+
+        TabbedPanelItem:
+            font_size:14
+            bold:True
+            text: "Create Domain"
+            BoxLayout:
+                size_hint_y: None
+                height: "400dp"
+                spacing:20
+                padding:20
+                Label:
+                    pos_hint:{"top":.1,"y":1}
+                    text: "Domain Name:"
+                    bold: True
+                TextInput:
+                    pos_hint:{"centre_x":.5,"y":.3}
+                    size_hint_y: None
+                    hint_text:"eg: <sub_domain>.<upper_domain>"
+                    height: "100dp"
+                    id:create_domain_name
+                    font_size:16
+                    italic: True
+                    multiline: False
+
+                FloatLayout:
+                    CustButton:
+                        text: "Create"
+                        pos_hint: {"right":.9, "y":0}
+                        size_hint: .4, .2
+                        italic: True
+                        on_press: app_grid.create_domain(create_domain_name.text)
+
+        TabbedPanelItem:
+            font_size:14
+            bold:True
+            text: "Insert New Address"
+            BoxLayout:
+                size_hint_y: None
+                height: "400dp"
+                spacing:20
+                padding:20
+                Label:
+                    pos_hint:{"top":.1,"y":1}
+                    text: "Domain Name:"
+                    bold: True
+                TextInput:
+                    pos_hint:{"centre_x":.5,"y":.3}
+                    size_hint_y: None
+                    height: "100dp"
+                    hint_text:"eg: <name>.\n<sub_domain>.\n<upper_domain>"
+                    id:insert_domain_name
+                    font_size:16
+                    italic: True
+                    multiline: False
+                Label:
+                    pos_hint:{"top":.1,"y":1}
+                    text: "IP Address:"
+                    bold: True
+                TextInput:
+                    pos_hint:{"centre_x":.5,"y":.3}
+                    size_hint_y: None
+                    hint_text:"eg: 100.100.100.100"
+                    height: "100dp"
+                    id:insert_ip_add
+                    font_size:16
+                    italic: True
+                    multiline: False
+                FloatLayout:
+                    CustButton:
+                        text: "Add Address"
+                        pos_hint: {"right":.9, "y": 0}
+                        size_hint: .5, .2
+                        italic: True
+                        on_press: app_grid.insert_new(insert_domain_name.text, insert_ip_add.text)
+
+        TabbedPanelItem:
+            font_size:14
+            bold:True
+            text: "List Domains"
+            BoxLayout:
+                size_hint_y: None
+                height: "400dp"
+                spacing:20
+                padding:20
+                Label:
+                    pos_hint:{"top":.1,"y":1}
+                    text: "Domain:"
+                    bold: True
+                TextInput:
+                    pos_hint:{"centre_x":.5,"y":.3}
+                    size_hint_y: None
+                    height: "100dp"
+                    hint_text:"eg. <domain_Server>"
+                    id:list_domain_name
+                    font_size:16
+                    italic: True
+                    multiline: False
+
+                FloatLayout:
+                    CustButton:
+                        text: "Generate list"
+                        pos_hint: {"right":.9, "y": 0}
+                        size_hint: .4, .2
+                        italic: True
+                        on_press: app_grid.list_domains(list_domain_name.text)
+                    CustButton:
+                        text: "List Domains"
+                        pos_hint: {"x":.1, "y": 0}
+                        size_hint: .4, .2
+                        italic: True
+                        on_press: app_grid.generate_domains()
+
+
+
+
+        TabbedPanelItem:
+            font_size:14
+            bold:True
+            text: "Delete Domain Name"
+            BoxLayout:
+                size_hint_y: None
+                height: "400dp"
+                spacing:20
+                padding:20
+                Label:
+                    pos_hint:{"top":.1,"y":1}
+                    text: "Domain Name:"
+                    bold: True
+                TextInput:
+                    id:delete_name
+                    pos_hint:{"centre_x":.5,"y":.3}
+                    size_hint_y: None
+                    height: "100dp"
+                    hint_text:"eg: <name>.<sub_domain>.<upper_domain>"
+                    font_size:16
+                    italic: True
+                    multiline: False
+
+                FloatLayout:
+                    CustButton:
+                        text: "Delete"
+                        pos_hint: {"right":.9, "y": 0}
+                        size_hint: .4, .2
+                        italic: True
+                        on_press: app_grid.delete_domain_name(delete_name.text)
+
+
+        TabbedPanelItem:
+            font_size:14
+            bold:True
+            text: "Delete Domain Server"
+            BoxLayout:
+                size_hint_y: None
+                height: "400dp"
+                spacing:20
+                padding:20
+                Label:
+                    pos_hint:{"top":.1,"y":1}
+                    text: "Domain Name:"
+                    bold: True
+                TextInput:
+                    id:delete_input
+                    pos_hint:{"centre_x":.5,"y":.3}
+                    size_hint_y: None
+                    height: "100dp"
+                    hint_text:"eg: <sub_domain>.<upper_domain>"
+                    font_size:16
+                    italic: True
+                    multiline: False
+
+                FloatLayout:
+                    CustButton:
+                        text: "Delete"
+                        pos_hint: {"right":.9, "y": 0}
+                        size_hint: .4, .2
+                        italic: True
+                        on_press: app_grid.delete_domain_server(delete_input.text)
+
+
+
