@@ -1,9 +1,9 @@
 # DNS-SERVER-SYSTEM-using-HASHTABLE
 A dns server application that uses a hash table as a data structure
-# Insertion Diagram
+## Insertion Diagram
 ![untitled](https://user-images.githubusercontent.com/36822517/42100389-573aaebc-7bc0-11e8-85fb-4d8346a5e5b5.png)
 
-# File Management
+## File Management
 ![screenshot 114](https://user-images.githubusercontent.com/36822517/42100229-eea438c8-7bbf-11e8-821a-ee17d162f243.png)
 ![rehashing](https://user-images.githubusercontent.com/36822517/42100366-4b099aae-7bc0-11e8-8188-c1f7cd4795c3.png)
 
