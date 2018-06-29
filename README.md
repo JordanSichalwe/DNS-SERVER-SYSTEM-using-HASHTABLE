@@ -32,4 +32,5 @@ Rehashing is the situation in which the Hash Table is changed, most likely in st
 ![screenshot 137](https://user-images.githubusercontent.com/36822517/42100245-fab54832-7bbf-11e8-83bc-5e3d25ce9977.png)
 
 ## Implementation Example
+ Simulate a web with .cs as the highest level domain. This has subdomains guests.cs, lecturers.cs and students.cs as illustrated in the diagram below. Each of these subdomains have at least 10 computers.
 ![dns](https://user-images.githubusercontent.com/36822517/42100976-04707d18-7bc2-11e8-8288-d546eee89843.png)
