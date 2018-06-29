@@ -1,3 +1,5 @@
+![icon](https://user-images.githubusercontent.com/36822517/42101589-c651a8fc-7bc3-11e8-94c1-03c1dcef8bef.png)
+
 # DNS-SERVER-SYSTEM-using-HASHTABLE
    A Domain Name System (DNS) is a system that keeps Domain names and their corresponding IP Address in a Network. It is able to resolve domain names to their IP Addresses. This is used most due to the fact that names are more convenient for humans to remember and work with, despite this computers communicate using IP address that can easily translate to binary to allow these conversations. The DNS server resolves these names into IP Addresses before sending the packets.
 A Domain Name is a descriptive name given to a network device e.g. Computer based on a hierarchical decentralized naming system with structure <name>.<subdomain>.<upper domain> e.g. dns.lectures.cs
