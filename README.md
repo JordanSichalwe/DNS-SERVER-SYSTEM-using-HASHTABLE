@@ -17,7 +17,7 @@ DNS App requires the following:
 ## File Management
 ![screenshot 114](https://user-images.githubusercontent.com/36822517/42100229-eea438c8-7bbf-11e8-821a-ee17d162f243.png)
 
-## Rashing
+## Rehashing
 Rehashing is the situation in which the Hash Table is changed, most likely in structure. This usually occurs due to Hash Table being too small to allow new entries. Therefore, Table is increased in size and entities of old table hashed to new table. This allows more entries into the table. To guarantee that every element finds a position table are of prime size. In This implementation, when table is full or entry cannot find a place the table rehashed to another table of prime size greater than double the size of original table e.g. 3 ->7-> 17. This is called Prime Double Rehashing.
 ![rehashing](https://user-images.githubusercontent.com/36822517/42100366-4b099aae-7bc0-11e8-8188-c1f7cd4795c3.png)
 
